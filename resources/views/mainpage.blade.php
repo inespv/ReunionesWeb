@@ -17,6 +17,12 @@
         <button> <a href="/reservas">Ver listado de reuniones</a> </button> 
         <button> <a href="/reservas/create">Crear una reunión</a> </button>
         <button> <a href="/">Volver a a página principal</a> </button>
-        
+
+        <?php
+        /*<div class="separator"></div>
+        <div class="right">*/
+            
+        ?>
+        </div>
     </body>
 </html>

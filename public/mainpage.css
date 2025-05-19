@@ -1,0 +1,19 @@
+button
+{
+
+    margin-left:auto;
+    margin-right: 100px;
+    padding : 10px 10px 15px;
+
+    border-style: inset ; 
+    border-radius: 10px;
+    border-color: rgb(17, 7, 216); 
+    border-width: 5px;
+    
+}
+
+p{
+    font-size:large;
+    font-weight:bold;
+    text-align:justify;
+}

@@ -5,7 +5,7 @@
     background: rgb(235, 106, 26);
   }
   
-  ul.navbar a {
+ul.navbar a {
 
     text-size-adjust: 25px;
     color : rgb(240, 231, 232);
@@ -14,11 +14,27 @@
     padding: 40px;
   }
   
-  ul.navbar a:hover {     
+ul.navbar a:hover {     
     background: orange;
   }
   
-  ul.navbar a:active {
+ul.navbar a:active {
     color: white;
     background: rgb(227, 155, 103);
   }
+
+img{
+  align-items: center;
+  margin-top: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor {
+      position: relative;
+  }
+
+
+.elemento {
+  opacity: 0.5;
+}

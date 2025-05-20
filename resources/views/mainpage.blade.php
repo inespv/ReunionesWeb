@@ -20,7 +20,9 @@
 
         <div class="separator"></div>
         <div class="vertLine">
-            
+            <br>
+            <br>
+            <img src="otriconinoua.png" class="inno">
         </div>
     </body>
 </html>

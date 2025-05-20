@@ -1,6 +1,14 @@
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 70px;
+}
+
+
 button
 {
-
     margin-left:auto;
     margin-right: 100px;
     padding : 10px 10px 15px;
@@ -25,4 +33,9 @@ p{
     margin:16px 0;
 }
 
-
+.inoo
+{
+    align-items: center;
+    max-width: 20%;
+    height: auto;
+}

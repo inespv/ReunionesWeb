@@ -2,6 +2,26 @@ body{
   font-family: Verdana;
     background-color: #007bff;
     color : orange;
+    margin:20px;
+}
+
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+form{
+  border: 8px groove rgb(43, 0, 173);
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 50px 25px 50px 25px;
+}
+
+.password
+{
+  margin-bottom: 10px;
 }
 
 h1{
@@ -9,7 +29,4 @@ h1{
   color: rgb(228, 131, 52);
   font-size: 50px;
   font-family: Verdana;
-}
-form{
-  font-size: 25px;
 }

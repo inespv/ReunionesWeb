@@ -16,7 +16,7 @@
             <th>FECHA INICIO</th>
             <th>FECHA FIN</th>
             <th>HORA</th>
-            <th>DESCRPCIÓN</th>
+            <th>DESCRIPCIÓN</th>
             <th>EDITAR RESERVA</th>
             <th>ELIMINAR RESERVA</th>
         </tr>
@@ -29,7 +29,10 @@
                 <td>{{$r->hora}}</td>
                 <td>{{$r->descripcion}}</td>
                 <td><button> <a href="/reservas/{{$r->id}}/edit">Editar reunión</a> </button></td>
-                <td><button> <a href="/reservas/{{$r->id}}/destroy">Eliminar reunión</a> </button><td>  
+                <td> <form action="/reservas/{{$r->id}}"method="post">
+                     @csrf
+                      @method('DELETE')
+                    <button>Eliminar reunión </button></form><td>  
             </tr>        
         @endforeach
     </table>

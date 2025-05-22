@@ -43,9 +43,8 @@ class ReservasController extends Controller
     //modifica los datos de la reserva
     function edit(string $id)
     {
-        $reserva = Reserva::findOrFail($id);
-        $reserva->id = 'Nuevo id';
-        return view('reserva.edit');
+        return view('reserva.edit',
+        ['reserva' => Reserva::findOrFail($id)]);        
     }
 
     //manda los datos modificados a la base de datos
@@ -56,16 +55,15 @@ class ReservasController extends Controller
         $attributes = request()-> validate
         (
             [
-                'titulo' => 'required',
-                'fechaInicio'=> 'required',
-                'fechaFin'=> 'required',
-                'hora'=> 'required',
-                'descripcion' => 'required'
+                'titulo' => '',
+                'fechaInicio'=> '',
+                'fechaFin'=> '',
+                'hora'=> '',
+                'descripcion' => ''
             ]   
         );
         $reserva = Reserva::find($id);
         $reserva->update($attributes);
-        $reserva->save();
         return view('reserva.update');
     }
 
@@ -75,9 +73,11 @@ class ReservasController extends Controller
         ['reservas' => Reserva::findOrFail($id)]);
     }
 
-    function destroy()
-    {
-
+    function destroy(string $id)
+    {  
+        $reserva = Reserva::find($id);
+        $reserva->delete();
+        return view('reserva.destroy');        
     }
 }
  

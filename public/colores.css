@@ -12,9 +12,41 @@ div{
   height: 90vh;
 }
 
-button{
-  width: 10px;
-  height: 10px;
+.ojo{
+
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  padding: 10px;
+    width: 50px;
+  height: 50px;
+}
+
+img
+{
+  margin-top: 3px;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.password
+{
+  margin-right: 0px;
+  padding :0px;
+}
+
+.toggle-btn{
+  position: absolute;
+            right: 10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+   border:none;
+  background-color:#007bff;;
+  width: 50px;
+  height: 50px;
 }
 
 form{

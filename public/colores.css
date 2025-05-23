@@ -12,16 +12,16 @@ div{
   height: 90vh;
 }
 
+button{
+  width: 10px;
+  height: 10px;
+}
+
 form{
   border: 8px groove rgb(43, 0, 173);
   border-radius: 10px;
   font-size: 20px;
   padding: 50px 25px 50px 25px;
-}
-
-.password
-{
-  margin-bottom: 10px;
 }
 
 h1{

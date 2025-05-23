@@ -8,61 +8,41 @@
     <title>Inicio sesión</title>
 </head>
 <body>
-    <div>
+    <div class="formulario">
         <form action="Home" method="get">
             <p>Introduce tu usuario:</p>
-            <input type = "text" name = "nombreusuario" size = "10" placeholder ="tu usuario">
-            <?php
-                /*if(isset($_GET) <> " ")
-                {
-                    $usuario = $_REQUEST['nombreUsuario'];
-                    $password = $_REQUEST['contraseña'];
-                }
-                else 
-                {9
-                    print("usuario incorrecto");
-                }*/
-            ?>
+            <input type="text" name="nombreusuario" size="10" placeholder="tu usuario">
+            
             <br>
             <p>Introduce tu contraseña:</p>
-                <input type = "password" name = "password" size = "10"
-                placeholder ="tu contraseña" id="password">
-
-            <div class="ojo">
+            <div class="password-container">
+                <input type="password" name="password" size="10" placeholder="tu contraseña" id="password">
                 <button type="button" onclick="togglePassword()" id="toggle-btn">
-                    <img id="toggle-icon" src="ojo_abierto-removebg-preview.png" alt=" Mostrar">
+                    <img id="toggle-icon" src="ojo_abierto-removebg-preview.png" alt="Mostrar">
                 </button>
             </div>
 
             <script>
-                function togglePassword()
-                {
-                    document.getElementById("toggle-btn").addEventListener
-                    (
-                        "click", function(event) 
-                        {
-                            let passwordField = document.getElementById("password");
-                            let toggleIcon = document.getElementById("toggle-icon");
+                function togglePassword() {
+                    let passwordField = document.getElementById("password");
+                    let toggleIcon = document.getElementById("toggle-icon");
 
-                            if (passwordField.type === "password") 
-                            {
-                                passwordField.type = "text";
-                                toggleIcon.src = "ojo_cerrado-removebg-preview.png";
-                                toggleIcon.alt = "Ocultar";
-                            } 
-                            else
-                            {
-                                passwordField.type = "text";
-                                toggleIcon.src = "ojo_abierto-removebg-preview.png";
-                                toggleIcon.alt = "Mostrar";
-                            }           
-                        }
-                    )
+                    // Alterna el tipo de entrada entre "password" y "text"
+                    if (passwordField.type === "password") {
+                        passwordField.type = "text";
+                        toggleIcon.src = "ojo_cerrado-removebg-preview.png";
+                        toggleIcon.alt = "Ocultar";
+                    } else {
+                        passwordField.type = "password";
+                        toggleIcon.src = "ojo_abierto-removebg-preview.png";
+                        toggleIcon.alt = "Mostrar";
+                    }
                 }
             </script>
-        <input type="submit" value="Iniciar sesión">  
-        <input type="reset" value="Borrar"> 
-    </form>
+
+            <input type="submit" value="Iniciar sesión">  
+            <input type="reset" value="Borrar"> 
+        </form>
     </div>
 </body>
 </html>

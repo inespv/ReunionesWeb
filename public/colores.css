@@ -5,14 +5,14 @@ body{
     margin:20px;
 }
 
-div{
+.formulario{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90vh;
 }
 
-.ojo{
+.password-container{
 
   position: relative;
   display: flex;

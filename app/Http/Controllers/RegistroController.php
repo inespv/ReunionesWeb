@@ -10,10 +10,11 @@ class RegistroController extends Controller
     {
         return view('registro.create');
     }
-
+   
     public function store()
     {
-        request()-> validate(
+        $attributes = request()-> validate
+        (
             [
                 'user' => 'required|max:15',
                 'phone' => 'required| max:9',
@@ -21,7 +22,9 @@ class RegistroController extends Controller
                 'address' => 'required| max:255',               
                 'password' => 'required| min:8| max:25'
             ]
-        );
+        ); 
         dd('your registration has been successful !');
-    }
+        User::create($attributes);
+        return view('create.blade.php.store');
+    } 
 }

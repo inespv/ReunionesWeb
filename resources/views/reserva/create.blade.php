@@ -21,7 +21,9 @@
              <input type = "date" name = "fechaFin" size = "25" placeholder ="fechaFin">
 
         <p> Introduce tu hora :
-             <input type = "text" name = "hora" size = "25" placeholder ="hora">
+             <input type = "time" name = "hora" size = "25" placeholder ="hora">
+
+
         <?php
             /*if(isset($_GET) <> " ")
             {
@@ -36,6 +38,11 @@
         <br>
         <p>Introduce descripción:</p>
         <input type = "text" name = "descripcion" size = "25" placeholder ="descripcion">
+        
+        @error('password')
+        <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+        @enderror
+
         <br>
         <input type="submit" value="Guardar" style="margin-top: 10px; margin-right: 10px; font-family:Verdana;">  
         <input type="reset" value="Borrar" style="margin-top: 10px;"> 

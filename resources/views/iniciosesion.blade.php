@@ -11,15 +11,18 @@
     <div class="formulario">
         <form action="Home" method="get">
             <p>Introduce tu usuario:</p>
-            <input type="text" name="nombreusuario" size="10" placeholder="tu usuario">
+            <input type="text" name="user" size="10" placeholder="tu usuario" value="{{ old('user') }}">
             
             <br>
             <p>Introduce tu contraseña:</p>
             <div class="password-container">
-                <input type="password" name="password" size="10" placeholder="tu contraseña" id="password">
+                <input type="password" name="password" size="10" placeholder="tu contraseña" id="password" value="{{ old('password')}}">
                 <button type="button" onclick="togglePassword()" id="toggle-btn">
                     <img id="toggle-icon" src="ojo_abierto-removebg-preview.png" alt="Mostrar">
                 </button>
+                @error('password')
+                    <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                @enderror
             </div>
 
             <script>
@@ -27,7 +30,6 @@
                     let passwordField = document.getElementById("password");
                     let toggleIcon = document.getElementById("toggle-icon");
 
-                    // Alterna el tipo de entrada entre "password" y "text"
                     if (passwordField.type === "password") {
                         passwordField.type = "text";
                         toggleIcon.src = "ojo_cerrado-removebg-preview.png";

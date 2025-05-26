@@ -29,15 +29,21 @@ class ReservasController extends Controller
         $attributes = request()-> validate
         (
             [
-                'titulo' => '',
-                'fechaInicio'=> '',
-                'fechaFin'=> '',
-                'hora'=> '',               
-                'descripcion' => ''
+                'titulo' => 'required',
+                'fechaInicio'=> 'required',
+                'fechaFin'=> 'required',
+                'hora'=> 'required',               
+                'descripcion' => 'required'
             ]   
         );
         Reserva::create($attributes);
         return view('reserva.store');
+
+        if (Auth::attempt(['reserva' => $request->user, 'titulo' => $request->password])) 
+        {
+            return redirect()->route('home');
+        }
+    return back()->withErrors(['reserva' => 'Credenciales incorrectas']);
     }
 
     //modifica los datos de la reserva

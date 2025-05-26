@@ -11,7 +11,7 @@ class LogginController extends Controller
         return view('loggin.loggin');
     }
 
-    public function store()
+    public function store(Request $request)
     {
         request()-> validate(
             [
@@ -19,5 +19,10 @@ class LogginController extends Controller
                 'password' => 'required'
             ]
         );
+        if (Auth::attempt(['user' => $request->user, 'password' => $request->password])) 
+        {
+            return redirect()->route('welcome.page.php');
+        }
+        return back()->withErrors(['user' => 'Credenciales incorrectas']);
     }
 }

@@ -7,11 +7,6 @@ use App\Models\Reserva;
 
 class ReservasController extends Controller
 {
-    //crear dichos métodos :)
-    //index -> lista (guardar en una variable, 
-    // y se muestra con show),
-    // create,store,update,edit,show,destroy
-
     function index()
     {
         $datos = Reserva::all();
@@ -36,8 +31,11 @@ class ReservasController extends Controller
                 'descripcion' => 'required'
             ]   
         );
+
         Reserva::create($attributes);
         return view('reserva.store');
+        
+        dd('your registration has been successful !');
 
         if (Auth::attempt(['reserva' => $request->user, 'titulo' => $request->password])) 
         {

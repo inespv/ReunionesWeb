@@ -18,9 +18,9 @@ Route::get('Home',function () {
     return view('mainpage');//-> with('nombre',$nombre); 
 });
 
-Route::get('create.blade.php', [RegistroController::class,'create']);
+Route::get('registro', [RegistroController::class,'create']);
 
-Route::post('create.blade.php', [RegistroController::class,'store']);
+Route::post('registro', [RegistroController::class,'store']);
 
 //Route::get('gestor.blade.php', [GestorController::class,'llamadaGestor']);
 //update,edit,show,destroy

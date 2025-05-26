@@ -16,7 +16,7 @@
     <ul class="navbar">
 
         <a href="iniciosesion.blade.php">Inicio Sesión </a>
-        <a href="create.blade.php">Registrarse</a>
+        <a href="/registro.blade.php">Registrarse</a>
         <img src="logo-otri.png" class="logo">
         <a href="#">Ayuda</a>
         <a href="#">Contáctanos</a>

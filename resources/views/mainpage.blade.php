@@ -10,8 +10,8 @@
     <title>Mi página principal</title>
 </head>
     <body>
-        <h1> Bienvenido a tu página principal ! </h1>
-        <h2>Qué deseas hacer ? </h2>
+        <h1> ¡Bienvenido a tu página principal ! </h1>
+        <h2>¿Qué deseas hacer ? </h2>
 
         <p> Visualizar tus reuniones  -  Crear una reunión  -  Volver a la página principal</p>
         <button> <a href="/reservas">Ver listado de reuniones</a> </button> 

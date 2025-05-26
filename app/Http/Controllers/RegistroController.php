@@ -22,7 +22,7 @@ class RegistroController extends Controller
                 'address' => 'required| max:255',               
                 'password' => 'required| min:8| max:25'
             ]
-        ); 
+        );
         dd('your registration has been successful !');
         User::create($attributes);
         return view('create.blade.php.store');

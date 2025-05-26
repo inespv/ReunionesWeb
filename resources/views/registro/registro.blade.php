@@ -10,7 +10,7 @@
 <body>
     <form action="Home" method="get">
         <p>Introduce tu usuario:</p>
-        <input type = "text" name = "nombreusuario" size = "10" placeholder ="usuario">
+        <input type = "text" name = "user" size = "10" placeholder ="user">
 
         <p> Introduce tu número de teléfono :
              <input type = "tel" name = "teléfono" size = "15" placeholder ="número de teléfono">
@@ -42,9 +42,7 @@
         ?>
         <br>
         <input type="submit" value="Registrarme" style="margin-top: 10px; margin-right: 10px; font-family:Verdana;">  
-        <input type="reset" value="Borrar" style="margin-top: 10px;"> 
-
-       
+        <input type="reset" value="Borrar" style="margin-top: 10px;">
     </form>
 </body>
 </html>

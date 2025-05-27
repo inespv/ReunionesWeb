@@ -25,6 +25,6 @@ class RegistroController extends Controller
         );
         dd('your registration has been successful !');
         User::create($attributes);
-        return view('create.blade.php.store');
+        return view('registro.store');
     } 
 }

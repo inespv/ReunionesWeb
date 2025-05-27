@@ -8,9 +8,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//esto está bien esto no se toca
 Route::get('iniciosesion.blade.php', function () {
-
-    return view('iniciosesion'); 
+    return view('iniciosesion');
 });
 
 Route::get('Home',function () {
@@ -22,6 +22,4 @@ Route::get('registro', [RegistroController::class,'create']);
 
 Route::post('registro', [RegistroController::class,'store']);
 
-//Route::get('gestor.blade.php', [GestorController::class,'llamadaGestor']);
-//update,edit,show,destroy
 Route::resource('reservas', ReservasController::class)->only('index','create','store','update','edit','show','destroy');

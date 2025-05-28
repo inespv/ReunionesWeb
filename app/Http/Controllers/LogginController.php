@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LogginController extends Controller
 {
@@ -21,8 +22,8 @@ class LogginController extends Controller
             'password.required' => 'El campo contraseña es obligatorio'
         ]);
 
-        if (LogginController::attempt(['user' => $request->user, 'password' => $request->password])) {
-            return redirect()->route('welcome.page');
+        if (Auth::attempt(['user' => $request->user, 'password' => $request->password])) {
+            return redirect('/reservas');
         }
         
         return back()->withErrors([

@@ -10,25 +10,31 @@
 </head>
 <body>
     <div class="formulario">
-        <form action="Home" method="get">
+        <form action="/loggin" method="post">
+            @csrf
             <p>Introduce tu usuario:</p>
-            <input type="text" name="nombreusuario" size="10" placeholder="tu usuario">
-            
+            <input type="text" name="user" size="10" placeholder="tu usuario">
+            @error('user')
+                <p>{{$message}}</p>
+            @enderror
             <br>
             <p>Introduce tu contraseña:</p>
             <div class="password-container">
                 <input type="password" name="password" size="10" placeholder="tu contraseña" id="password">
+                
                 <button type="button" onclick="togglePassword()" id="toggle-btn">
                     <img id="toggle-icon" src="ojo_abierto-removebg-preview.png" alt="Mostrar">
                 </button>
+              
             </div>
-
+  @error('password')
+                <p>{{$message}}</p>
+            @enderror
             <script>
                 function togglePassword() {
                     let passwordField = document.getElementById("password");
                     let toggleIcon = document.getElementById("toggle-icon");
 
-                    // Alterna el tipo de entrada entre "password" y "text"
                     if (passwordField.type === "password") {
                         passwordField.type = "text";
                         toggleIcon.src = "ojo_cerrado-removebg-preview.png";

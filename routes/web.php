@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\ReservasController;
+use App\Http\Controllers\LogginController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,4 +23,6 @@ Route::get('registro', [RegistroController::class,'create']);
 
 Route::post('registro', [RegistroController::class,'store']);
 
-Route::resource('reservas', ReservasController::class)->only('index','create','store','update','edit','show','destroy');
+Route::resource('reservas', ReservasController::class)->only('index','create','store','update','edit','show','destroy')->middleware('auth');
+
+Route::post('loggin',[LogginController::class,'store']);

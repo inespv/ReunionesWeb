@@ -10,8 +10,45 @@ class ReservasController extends Controller
     function index()
     {
         $datos = Reserva::all();
+
+        // URL de la API
+        $url = "http://172.16.196.114:8090/api/generate";
+
+        // Datos que se enviarán en la solicitud POST
+        $data = [
+            "model" => "gemma3:1b",
+            "prompt" => "{{$datos}} indica la hora de la reunión así : hora - descripcion",
+            "stream"=> false
+        ];
+
+        // Inicializar cURL
+        $ch = curl_init($url);
+
+        // Configuración de cURL
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Content-Type: application/json',
+        ]);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+
+        // Ejecutar la solicitud
+        $response = curl_exec($ch);
+        $response=json_decode($response);
+
+        // Verificar errores
+        if (curl_errno($ch)) {
+            echo "Error en cURL: " . curl_error($ch);
+        } else {
+            // Mostrar la respuesta
+            //echo "Respuesta de la API: " . $response;
+        }
+
+        // Cerrar cURL
+        curl_close($ch);
+
         return view('reserva.index', 
-        ['reservas' => $datos]);
+        ['reservas' => $datos,'resumen'=>$response]);
     }
 
     function create()

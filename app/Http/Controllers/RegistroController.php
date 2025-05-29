@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class RegistroController extends Controller
 {
@@ -23,7 +24,6 @@ class RegistroController extends Controller
                 'password' => 'required| min:8| max:25'
             ]
         );
-        dd('your registration has been successful !');
         User::create($attributes);
         return view('registro.store');
     } 

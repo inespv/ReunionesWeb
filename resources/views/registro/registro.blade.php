@@ -9,6 +9,7 @@
 </head>
 <body>
     <form action="Home" method="get">
+        
         <p>Introduce tu usuario:</p>
         <input type = "text" name = "user" size = "10" placeholder ="user">
 
@@ -35,11 +36,11 @@
         <br>
         <p>Introduce tu contraseña:</p>
         <input type = "password" name = "contraseña" size = "25" placeholder ="contraseña">
-        <?php
-        //@error('número de teléfono')
-           //<p class="text-red-500 text-xs mt-1">{[$message]}</p>
-            //@enderror
-        ?>
+
+        @error('número de teléfono')
+        <p>{{$message}}</p>
+        @enderror
+
         <br>
         <input type="submit" value="Registrarme" style="margin-top: 10px; margin-right: 10px; font-family:Verdana;">  
         <input type="reset" value="Borrar" style="margin-top: 10px;">

@@ -48,3 +48,9 @@ form{
   font-size: 20px;
   padding: 50px 25px 50px 25px;
 }
+
+.errores
+{
+  color: red;
+  text-shadow: #ff114d;
+}

@@ -15,7 +15,7 @@
             <p>Introduce tu usuario:</p>
             <input type="text" name="user" size="10" placeholder="tu usuario">
             @error('user')
-                <p>{{$message}}</p>
+                <p class="errores">{{$message}}</p>
             @enderror
             <br>
             <p>Introduce tu contraseña:</p>
@@ -28,7 +28,7 @@
               
             </div>
   @error('password')
-                <p>{{$message}}</p>
+                <p class="errores">{{$message}}</p>
             @enderror
             <script>
                 function togglePassword() {

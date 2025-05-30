@@ -17,7 +17,7 @@ class ReservasController extends Controller
         // Datos que se enviarán en la solicitud POST
         $data = [
             "model" => "llama3.2",
-            "prompt" => "{{$datos}} ¿ De qué tratan las reuniones de la lista ?",
+            "prompt" => "{{$datos}} Breve resumen del tema principal de las reuniones",
             "stream"=> false
         ];
 

@@ -10,7 +10,7 @@
 <body>
     <h1>Listado de reuniones</h1>
 
-    <p>{{$resumen->response}}</p>
+    <p class="resumenIA">{!!$resumen->response!!}</p>
 
     <table border="1", align="center", cellspacing="5">
 	    <tr>
@@ -39,5 +39,6 @@
             </tr>        
         @endforeach
     </table>
+    <button class="crearB"> <a href="/reservas/create">Crear una reunión</a> </button>
 </body>
 </html>

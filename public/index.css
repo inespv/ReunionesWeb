@@ -6,6 +6,17 @@ button  {
     background-color: lightskyblue;
 }
 
+.crearB
+{
+    align-items: center;
+    margin-top: 20px;
+    border-style: inset ;
+ 
+    border-radius: 10px;
+    border-color: rgb(17, 7, 216); 
+    border-width: 5px;
+}
+
 h1
 {
     color: rgb(228, 131, 52);

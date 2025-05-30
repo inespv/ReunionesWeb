@@ -16,8 +16,8 @@ class ReservasController extends Controller
 
         // Datos que se enviarán en la solicitud POST
         $data = [
-            "model" => "gemma3:1b",
-            "prompt" => "{{$datos}} indica la hora de la reunión así : hora - descripcion",
+            "model" => "llama3.2",
+            "prompt" => "{{$datos}} ¿ De qué tratan las reuniones de la lista ?",
             "stream"=> false
         ];
 

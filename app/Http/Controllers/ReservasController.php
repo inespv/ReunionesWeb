@@ -12,7 +12,7 @@ class ReservasController extends Controller
         $datos = Reserva::all();
 
         // URL de la API
-        $url = "http://172.16.196.114:8090/api/generate";
+        $url = "http://213.180.0.35:47902";
 
         // Datos que se enviarán en la solicitud POST
         $data = [
@@ -48,7 +48,7 @@ class ReservasController extends Controller
         curl_close($ch);
 
         return view('reserva.index', 
-        ['reservas' => $datos,'resumen'=>$response]);
+        ['reservas' => $datos ,'resumen'=>$response]);
     }
 
     function create()
